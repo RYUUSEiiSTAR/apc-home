@@ -1,0 +1,122 @@
+html,
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    height: 100vh;
+    overflow: hidden;
+    
+    #header-image {
+        min-height: 100vh;
+        min-width: 100vw;
+        float: right;
+        position: relative;
+
+        pointer-events: none;
+        cursor: default;
+    }
+
+    #header-text {
+        position: absolute;
+        right: 5vw;
+        bottom: 15vh;
+    
+        color: white;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: right;
+        font-family: 'Josefin Sans', sans-serif;
+    
+        #header-title {
+            font-size: 10vh;
+        }
+    
+        #header-subtitle {
+            font-size: 3.5vh;
+        }
+    }
+
+    #chevrons-down {
+        width: 5vh;
+        height: 5vh;
+
+        position: absolute;
+        color: white;
+        left: 50vw;
+        bottom: 5vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        #header-image {
+            min-height: 125%;
+        }
+    }
+}
+
+#body {
+    margin: 10vh 10vw;
+
+    h1 {
+        color: #2F80ED;
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+    }
+
+    p {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+
+        #contact-person {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        #contact-subtitle {
+            color: lightslategray;
+        }
+    }
+
+    .point {
+        display: inline-block;
+        width: 33.33333333%;
+        vertical-align: top;
+
+        .point-icon {
+            height: 75px;
+            width: 75px;
+            position: relative;
+            left: 50%;
+            margin-left: -37.5px;
+        }
+
+        .target-icon {
+            color: #EB5757;
+        }
+
+        .gun-icon {
+            color: #BDBDBD;
+            width: 120px;
+            margin-left: -60px;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .crosshair-icon {
+            color: #6FCF97;
+        }
+
+        p {
+            padding: 1em;
+        }
+    }
+
+    .contact-icon {
+        height: 1em;
+        width: 1em;
+        padding-right: 10px;
+    }
+}
