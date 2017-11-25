@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import index from './index.html';
 import jquery from 'jquery';
@@ -22,9 +21,12 @@ export default class APC extends React.Component {
             <div>
                 <Router>
                     <div>
-                        <Nav />
-                        <Route path="/" component={ LandingPage } />
-                        <Route path="/armoury" component={ Armoury } />
+                        {/* <Nav /> */}
+                        <Switch>
+                            <Route exact path="/" component={ LandingPage } />
+                            <Route path="/armoury" component={ Armoury } />
+                            <Route component={ LandingPage } />
+                        </Switch>
                     </div>
                 </Router>
             </div>
