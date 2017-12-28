@@ -101,13 +101,29 @@ body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
 
-    #contact-person {
+    .subheading {
       font-size: 1.5em;
       font-weight: bold;
     }
 
-    #contact-subtitle {
+    .subtitle {
       color: $theme-subtitle;
+    }
+
+    .left-panel {
+      width: 50%;
+      float: left;
+
+      .sell-image {
+        width: 30vw;
+      }
+    }
+
+    .right-panel {
+      width: 50%;
+      float: right;
+
+      text-align: left;
     }
   }
 

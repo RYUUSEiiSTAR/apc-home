@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Nav from './nav.jsx'
 import HeaderImage from '../images/header.jpg';
 import Weapon from '../images/weapon.svg';
-import { ChevronsDown, Target, Crosshair, Phone, AtSign, Mail } from 'react-feather';
+import { Target, Crosshair, Phone, AtSign, Mail } from 'react-feather';
 
 export default function LandingPage() {
     return (
@@ -27,10 +27,6 @@ export default function LandingPage() {
                         <br />
                         Condell Park, NSW 2200
                     </div>
-                </div>
-                
-                <div id='chevrons-down'>
-                    <ChevronsDown id='chev-icon'/>
                 </div>
             </div>
             
@@ -82,9 +78,9 @@ export default function LandingPage() {
                 <div id='contact'>
                     <h1>Contact</h1>
                     <p>
-                        <span id='contact-person'>Eric Ryan</span>
+                        <span className='subheading'>Eric Ryan</span>
                         <br />
-                        <span id='contact-subtitle'>Club Secretary</span>
+                        <span className='subtitle'>Club Secretary</span>
                     </p>
                     <p>
                         <Phone className='contact-icon' />+61 410 620 428
