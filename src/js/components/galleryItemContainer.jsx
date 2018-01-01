@@ -6,9 +6,15 @@ export default class GalleryItemContainer extends React.Component {
     constructor(props) {
         super(props);
         this.newItem = this.newItem.bind(this);
+        this.requireAll = this.requireAll.bind(this);
+        this.requireAll(require.context('../../armoury/', true, /\.jpg|txt$/));
         const gallery = [];
         gallery.push(this.newItem('Hammerli xesse IPSC', pic, 'Hello World'));
         this.state = { gallery: gallery};
+    }
+
+    requireAll(r) {
+        r.keys().forEach(r);
     }
 
     newItem(name, image, description) {

@@ -44,7 +44,7 @@ module.exports = {
                 }]
             },
             {
-                test: /\.(jpg|png|svg)$/,
+                test: /\.(jpg|png|svg|txt)$/,
                 include: APP_DIR,
                 use: [{
                     loader: 'file-loader',
