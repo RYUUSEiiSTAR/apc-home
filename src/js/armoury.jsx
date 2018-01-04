@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Nav from './nav.jsx';
+import Nav from './components/nav.jsx'
 import GalleryItemContainer from './components/galleryItemContainer.jsx';
 import Contact from './components/contact.jsx';
 

@@ -4,7 +4,7 @@ export default function GalleryItem(props) {
     return (
         <div>
             <div className='left-panel'>
-                <img className='sell-image' src={ props.image }/>
+                <img className='sell-image' src={ props.image } alt={ props.title }/>
             </div>
             <div className='right-panel'>
                 <p className='sell-text'>

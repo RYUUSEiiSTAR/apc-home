@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Nav from './nav.jsx'
+import Nav from './components/nav.jsx'
 import Contact from './components/contact.jsx';
 import HeaderImage from '../images/header.jpg';
 import Weapon from '../images/weapon.svg';
