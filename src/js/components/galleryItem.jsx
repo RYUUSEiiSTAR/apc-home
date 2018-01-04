@@ -3,16 +3,17 @@ import React from 'react';
 export default function GalleryItem(props) {
     return (
         <div>
-            <p>
-                <span className='subheading'>{ props.title }</span>
-            </p>
-            <br />
-            <span className='left-panel'>
+            <div className='left-panel'>
                 <img className='sell-image' src={ props.image }/>
-            </span>
-            <span className='right-panel'>
-                <p>{ props.description }</p>
-            </span>
+            </div>
+            <div className='right-panel'>
+                <p className='sell-text'>
+                    <span className='subheading'>{ props.title }</span>
+                    <br />
+                    <br />
+                    { props.description }
+                </p>
+            </div>
         </div>
     );
 }

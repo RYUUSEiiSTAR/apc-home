@@ -151,19 +151,33 @@ body {
     padding-right: 10px;
   }
 
-  .left-panel {
-    width: 50%;
-    float: left;
+  ul {
+    list-style-type: none;
 
-    .sell-image {
-      width: 30vw;
+    li {
+      padding-bottom: 10vh;
+      width: 100%;
+      display: inline-block;
+
+      .left-panel {
+        width: 50%;
+        float: left;
+    
+        .sell-image {
+          width: 30vw;
+          position: relative;
+        }
+      }
+    
+      .right-panel {
+        width: 50%;
+        float: right;
+    
+        .sell-text {
+          text-align: left;
+          white-space: pre-wrap;
+        }
+      }
     }
-  }
-
-  .right-panel {
-    width: 50%;
-    float: right;
-
-    text-align: left;
   }
 }

@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Nav from './nav.jsx'
+import Contact from './components/contact.jsx';
 import HeaderImage from '../images/header.jpg';
 import Weapon from '../images/weapon.svg';
-import { Target, Crosshair, Phone, AtSign, Mail } from 'react-feather';
+import { Target, Crosshair } from 'react-feather';
 
 export default function LandingPage() {
     return (
@@ -59,6 +60,9 @@ export default function LandingPage() {
                             </p>
                         </div>
                     </div>
+                    <div>
+                        The club and its members will occasionally have firearms for sale. They can be viewed <a>here</a>. Please contact the club secretary for all enquiries.
+                    </div>
                 </div>
                 <br />
                 <div id='membership'>
@@ -75,28 +79,8 @@ export default function LandingPage() {
                     </p>
                 </div>
                 <br />
-                <div id='contact'>
-                    <h1>Contact</h1>
-                    <p>
-                        <span className='subheading'>Eric Ryan</span>
-                        <br />
-                        <span className='subtitle'>Club Secretary</span>
-                    </p>
-                    <p>
-                        <Phone className='contact-icon' />+61 410 620 428
-                    </p>
-                    <p>
-                        <AtSign className='contact-icon' />secretary@airportpistolclub.com.au
-                    </p>
-                    <p>
-                        <Mail className='contact-icon' />Airport Pistol Club
-                        <br />
-                        PO Box 57
-                        <br />
-                        Minto 
-                        <br />
-                        NSW 2566
-                    </p>
+                <div>
+                    <Contact />
                 </div>
             </div>
         </div>
