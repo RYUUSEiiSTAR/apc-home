@@ -89,7 +89,7 @@ body {
 }
 
 #body {
-  padding: 75px 10vw;
+  padding: 75px 10vw 0px;
 
   h1 {
     color:$main-theme;
@@ -108,22 +108,6 @@ body {
 
     .subtitle {
       color: $theme-subtitle;
-    }
-
-    .left-panel {
-      width: 50%;
-      float: left;
-
-      .sell-image {
-        width: 30vw;
-      }
-    }
-
-    .right-panel {
-      width: 50%;
-      float: right;
-
-      text-align: left;
     }
   }
 
@@ -165,5 +149,21 @@ body {
     height: 1em;
     width: 1em;
     padding-right: 10px;
+  }
+
+  .left-panel {
+    width: 50%;
+    float: left;
+
+    .sell-image {
+      width: 30vw;
+    }
+  }
+
+  .right-panel {
+    width: 50%;
+    float: right;
+
+    text-align: left;
   }
 }

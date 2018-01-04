@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 import { NavLink } from 'react-router-dom';
 
 export default class Nav extends React.Component {

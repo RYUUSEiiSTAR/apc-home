@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import index from './index.html';
-import jquery from 'jquery';
 import style from './css/styles.scss';
 import feather from 'feather-icons';
 
@@ -21,7 +20,6 @@ export default class APC extends React.Component {
             <div>
                 <Router>
                     <div>
-                        {/* <Nav /> */}
                         <Switch>
                             <Route exact path="/" component={ LandingPage } />
                             <Route path="/armoury" component={ Armoury } />
