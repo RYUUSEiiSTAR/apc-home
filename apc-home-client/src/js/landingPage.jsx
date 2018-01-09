@@ -61,7 +61,7 @@ export default function LandingPage() {
                         </div>
                     </div>
                     <div>
-                        The club and its members will occasionally have firearms for sale. They can be viewed <a>here</a>. Please contact the club secretary for all enquiries.
+                        <p>The club and its members will occasionally have firearms for sale. They can be viewed <Link to='/armoury'>here</Link>. Please contact the club secretary for all enquiries.</p>
                     </div>
                 </div>
                 <br />

@@ -1,0 +1,14 @@
+{
+    "name": "Airport Pistol Club",
+    "short_name": "APC",
+    "start_url": ".",
+    "display": "browser",
+    "background_color": "#fff",
+    "theme_color": "#2f80ed",
+    "description": "The Airport Pistol Club's Website",
+    "icons": {
+      "src": "images/weapon.svg",
+      "sizes": "512x512",
+      "type": "image/svg"
+    }
+  }

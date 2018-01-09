@@ -6,13 +6,13 @@ const extractScss = new extractTextPlugin({
 });
 
 const BUILD_DIR = path.resolve(__dirname, 'dist');
-const APP_DIR = path.resolve(__dirname, 'src');
+const APP_DIR = path.resolve(__dirname, 'apc-home-client/src');
 
 module.exports = {
     entry: APP_DIR + '/index.jsx',
     output: {
         path: BUILD_DIR,
-        filename: 'index.js'
+        filename: 'bundle.js'
     },
     module: {
         rules: [
@@ -34,7 +34,7 @@ module.exports = {
                 loaders: 'babel-loader'
             },
             {
-                test: /\.(html|ico|json)$/,
+                test: /\.(html|ico)$/,
                 include: APP_DIR,
                 use: [{
                     loader: 'file-loader',
@@ -50,7 +50,7 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[path][name].[ext]',
-                        context: 'src/'
+                        context: 'apc-home-client/src/'
                     }
                 }]
             }
