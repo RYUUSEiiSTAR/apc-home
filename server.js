@@ -1,11 +1,12 @@
-const https = require('http');
+const https = require('https');
 const querystring = require('querystring');
 const express = require('express');
+
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3002;
 
 const params = querystring.stringify({
-    api_key: 'e2004806c855de6f5f882c498ef4c5d8',
+    api_key: '',
     method: 'flickr.photosets.getPhotos',
     photoset_id: '72157689007399362',
     user_id: '137676527@N05',
@@ -14,23 +15,36 @@ const params = querystring.stringify({
     jsoncallback: '1'
 });
 
-const options = {
-    hostname: 'api.flickr.com',
-    path: '/services/rest/?' + params
+const allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
 }
 
-app.get('/api/flickr', (apiRequest, apiResponse) => {
-    https.get(options, (req, res) => {
-        let body;
-        console.log(body);
+const options = {
+    hostname: 'api.flickr.com',
+    path: '/services/rest/?' + params,
+    headers: { 
+        'Access-Control-Allow-Credentials': true,
+        'Access-Control-Allow-Origin': 'localhost',
+        'Content-Type': 'application/json'
+    }
+}
+
+app.use(allowCrossDomain);
+app.get('/api/flickr-photosets', (apiRequest, apiResponse) => {
+    https.get(options, (res) => {
+        let body = '';
+
         res.on('data', (data) => {
             body += data;
-            console.log(`${data}`);
         })
-        res.end('end', () => {
-            console.log(`${body}`);
+        res.on('end', () => {
+            body = body.substr(2).slice(0, -1);
             body = JSON.parse(body)
-            apiResponse.send({ 'response': body });
+            console.log(body);
+            apiResponse.send(JSON.stringify(body));
         })
     }).on('error', (error) => {
         console.log(error);
