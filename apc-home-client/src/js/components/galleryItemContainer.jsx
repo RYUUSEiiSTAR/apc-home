@@ -9,24 +9,14 @@ export default class GalleryItemContainer extends React.Component {
     }
 
     componentDidMount() {
-        this.Gallery();
+        this.GalleryItemContainer();
     }
 
-    Gallery() {
+    GalleryItemContainer() {
         $.ajax({
             type: 'GET',
-            url: 'https://api.flickr.com/services/rest/',
-            data: {
-                api_key: '',
-                method: 'flickr.photosets.getPhotos',
-                photoset_id: '72157689007399362',
-                user_id: '137676527@N05',
-                extras: 'description',
-                format: 'json',
-                jsoncallback: '1'
-            },
+            url: 'http://localhost:3002/api/flickr-photosets',
             success: function(data) {
-                data = data.substr(2).slice(0, -1);
                 let response = JSON.parse(data);
                 let galleryItems = [];
                 $.each(response.photoset.photo, function(idx, photo) {
@@ -35,7 +25,7 @@ export default class GalleryItemContainer extends React.Component {
                     let description = photo.description._content;
                     let galleryItem = <GalleryItem title = { title } image = { image } description = { description } />;
                     galleryItems.push({idx, galleryItem});
-                })
+                });
 
                 let gallery = galleryItems.map((item) =>
                     <li key = { item.idx }>{ item.galleryItem }</li>
@@ -48,9 +38,9 @@ export default class GalleryItemContainer extends React.Component {
             error: function(data) {
                 data = data.substr(2).slice(0, -1);
                 let response = JSON.parse(data);
-                alert(response.message)
+                alert(response.message);
             }
-        })
+        });
     }
 
     render() {
