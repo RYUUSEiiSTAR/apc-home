@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const params = querystring.stringify({
-    api_key: 'e2004806c855de6f5f882c498ef4c5d8',
+    api_key: '',
     method: 'flickr.photosets.getPhotos',
     photoset_id: '72157689007399362',
     user_id: '137676527@N05',
