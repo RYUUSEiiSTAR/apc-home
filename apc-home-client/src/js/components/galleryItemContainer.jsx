@@ -38,7 +38,6 @@ export default class GalleryItemContainer extends React.Component {
             error: function(data) {
                 data = data.substr(2).slice(0, -1);
                 let response = JSON.parse(data);
-                alert(response.message);
             }
         });
     }
