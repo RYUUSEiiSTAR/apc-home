@@ -16,7 +16,7 @@ const params = querystring.stringify({
 });
 
 const allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Origin', "http://localhost:3000");
     res.header('Access-Control-Allow-Methods', 'GET');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
@@ -25,9 +25,7 @@ const allowCrossDomain = function(req, res, next) {
 const options = {
     hostname: 'api.flickr.com',
     path: '/services/rest/?' + params,
-    headers: { 
-        'Access-Control-Allow-Credentials': true,
-        'Access-Control-Allow-Origin': 'localhost',
+    headers: {
         'Content-Type': 'application/json'
     }
 }
