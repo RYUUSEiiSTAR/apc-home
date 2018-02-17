@@ -23,12 +23,8 @@ export default function Armoury() {
                     </p>
                 </div>
                 <br />
-                <div>
-                    <GalleryItemContainer />
-                </div>
-                <div>
-                    <Contact />
-                </div>
+                <GalleryItemContainer />
+                <Contact />
             </div>
         </div>
     );

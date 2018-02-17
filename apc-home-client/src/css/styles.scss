@@ -101,6 +101,11 @@ body {
         font-family: 'Roboto', sans-serif;
         text-align: center;
 
+
+        &.italics {
+            font-style: italic;
+        }
+        
         .subheading {
             font-size: 1.5em;
             font-weight: bold;
