@@ -6,6 +6,7 @@ import index from './index.html';
 import style from './css/styles.scss';
 
 import LandingPage from './js/landingPage.jsx';
+import Events from './js/events.jsx';
 import Armoury from './js/armoury.jsx';
 
 export default class APC extends React.Component {
@@ -20,6 +21,7 @@ export default class APC extends React.Component {
                     <div>
                         <Switch>
                             <Route exact path="/" component={ LandingPage } />
+                            <Route path="/events" component={ Events } />
                             <Route path="/armoury" component={ Armoury } />
                             <Route component={ LandingPage } />
                         </Switch>

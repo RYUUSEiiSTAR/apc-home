@@ -26,6 +26,7 @@ export default class Nav extends React.Component {
     return(
       <div id='nav'>
         <NavLink className='nav-item' to='/'>APC</NavLink>
+        <NavLink className='nav-item' to='/events'>Events</NavLink>
         <NavLink className='nav-item' to='/armoury'>Armoury</NavLink>
       </div>
     );
