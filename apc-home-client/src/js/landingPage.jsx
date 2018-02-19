@@ -11,10 +11,8 @@ export default function LandingPage() {
     return (
         <div>
             <Nav />
-            
             <div id='header'>
                 <img id='header-image' src={ HeaderImage } />
-
                 <div id='header-text'>
                     <div id='header-title'>
                         Airport
@@ -30,12 +28,11 @@ export default function LandingPage() {
                     </div>
                 </div>
             </div>
-            
             <div id='body'>
                 <div id='intro'>
                     <h1>Welcome to the Airport Pistol Club</h1>
-                    <div>
-                        <div className='point'>
+                    <div className='flex'>
+                        <div className='point flex-33'>
                             <Target className='point-icon target-icon'/>
                             <p>
                                 Condell Park Indoor Firing Range consists of 12 bays of up to 25 meters
@@ -44,7 +41,7 @@ export default function LandingPage() {
                                 The armoury is available throughout the night to purchase supplies and targets
                             </p>
                         </div>
-                        <div className='point'>
+                        <div className='point flex-33'>
                             <img src={ Weapon } className='point-icon gun-icon'/>
                             <p>
                                 The club and facility caters for all popular pistols; including air, rimfire .22, center fire 9mm and .38, and .357 magnum
@@ -53,7 +50,7 @@ export default function LandingPage() {
                                 .22LR rifles are also welcome
                             </p>
                         </div>
-                        <div className='point'>
+                        <div className='point flex-33'>
                             <Crosshair className='point-icon crosshair-icon'/>
                             <p>
                                 We meet every Wednesday night between 7PM - 9PM and hold competitive shoots every other Wednesday

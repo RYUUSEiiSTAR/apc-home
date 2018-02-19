@@ -5,6 +5,12 @@ $red: #eb5757;
 $grey: #bdbdbd;
 $green: #6fcf97;
 
+@mixin flex-grow($size) {
+    flex-grow: $size;
+    -ms-flex-grow: $size;
+    -moz-flex-grow: $size;
+    -webkit-flex-grow: $size;
+}
 
 html,
 body {
@@ -166,6 +172,57 @@ body {
                 
             &.upcoming {
                 background-color: lighten($main-theme, 35%);
+            }
+        }
+    }
+
+    .flex {
+        display: -webkit-flex;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    @media screen and (max-width: 640px) {
+        .flex {
+            -ms-flex-wrap: wrap;
+            flex: 1 1 0;
+            .flex-50 {
+                width: 100%;
+                text-align: center;
+
+                .sell-text {
+                    text-align: center;
+                }
+            }
+            
+            .flex-33 {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    @media screen and (min-width: 641px) {
+        .flex {
+            .flex-50 {
+                width: 50%;
+                @include flex-grow(1);
+            }
+
+            .flex-33 {
+                width: calc(100%/3);
+                @include flex-grow(1);
             }
         }
     }
